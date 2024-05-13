@@ -1,0 +1,71 @@
+import React from 'react'
+import { ArrowUpRight } from 'lucide-react'
+const Card = ({store}) => {
+  return (
+    <div>
+          <div className="w-[300px] rounded-md border pt-5">
+    {/* <img
+      src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=htmlformat&fit=crop&w=800&q=60"
+      alt="Laptop"
+      className="h-[200px] w-full rounded-t-md object-cover"
+    /> */}
+    <div className="p-4">
+      <h1 className="inline-flex items-center text-lg font-semibold uppercase">
+        {store.name} &nbsp; <ArrowUpRight className="h-4 w-4" />
+      </h1>
+      <div className='flex items-center justify-between"'>
+      <p className="mt-3 text-sm text-gray-600">
+    Created By- <span className='font-medium'> {store.createdBy} </span>
+      </p>
+      <label htmlhtmlfor="" className="mt-4  bg-gray-300 ml-8 inline-block rounded-full px-2 py-1 text-[12px] font-medium text-gray-900">
+            {" "}
+             Available Slots{" "}{store.slots}
+          </label>
+      </div>
+      <div className="mt-3 flex items-center justify-between">
+        <div>
+          <label htmlhtmlfor="" className="mb-2 mr-2 inline-block rounded-full bg-gray-300 px-2 py-1 text-sm font-medium text-gray-900">
+            {" "}
+             Open Time{" "}{store.openTime}
+          </label>
+        </div>
+        <div>
+          <label htmlhtmlfor="" className="mb-2  inline-block rounded-full bg-gray-300 px-2 py-1 text-sm font-medium text-gray-900">
+            {" "}
+             Close Time{" "}{store.closeTime}
+          </label>
+        </div>
+      </div>
+      {/* <div className="mt-4">
+        <button>
+        <span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
+          Not-available
+        </span>
+        </button>
+
+<button>
+<span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
+          End
+        </span>
+</button>
+
+<button>
+<span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
+          Start
+        </span>
+</button>
+
+      </div> */}
+      <button
+        type="button"
+        className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+      >
+        Book Appointment
+      </button>
+    </div>
+  </div>
+    </div>
+  )
+}
+
+export default Card
